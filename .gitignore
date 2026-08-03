@@ -1,0 +1,58 @@
+# ==============================================================================
+# AMBIENTE VIRTUAL PYTHON E CONFIGURAÇÕES DA IDE
+# ==============================================================================
+.venv/
+venv/
+ENV/
+env/
+.vscode/
+.idea/
+
+# ==============================================================================
+# CACHE DO PYTHON E JUPYTER NOTEBOOKS
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# ==============================================================================
+# CONFIGURAÇÕES LOCAIS E CHAVES DE SEGURANÇA (LGPD / API)
+# ==============================================================================
+.env
+*.env
+
+# ==============================================================================
+# PASTA DE BI / POWER BI (SUSPENSA TEMPORARIAMENTE)
+# ==============================================================================
+bi/
+BI/
+*.pbix
+*.pbit
+*.pbip
+
+# ==============================================================================
+# DADOS BRUTOS, ARQUIVOS COMPACTADOS E PASTAS DE EXTRAÇÃO (INEP / CADÚNICO)
+# ==============================================================================
+# Ignora absolutamente todas as subpastas e arquivos brutos dentro de Dados_Educacao
+Dados_Educacao/*
+
+# Ignora dados da pasta local /dados/
+dados/*.xlsx
+dados/*.csv
+
+# ==============================================================================
+# EXCEÇÕES: LIBERA EXCLUSIVAMENTE A SUBPASTA OUTPUTS E SEUS ARTEFATOS
+# ==============================================================================
+!Dados_Educacao/outputs/
+!Dados_Educacao/outputs/*.csv
+!Dados_Educacao/outputs/*.parquet
+
+# ==============================================================================
+# LOGS, ARQUIVOS TEMPORÁRIOS E SISTEMA OPERACIONAL
+# ==============================================================================
+*.log
+.DS_Store
+Thumbs.db
+~$*.xlsx
+~$*.docx
