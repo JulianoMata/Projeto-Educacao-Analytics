@@ -23,7 +23,11 @@ O projeto é estruturado em três módulos integrados que acompanham todo o cicl
   Analisa a evolução da infraestrutura física e digital das escolas públicas mineiras entre **2019 e 2025**. Mapeia quais recursos (como laboratórios, bibliotecas e saneamento) mais se conectam com o porte escolar e identifica gargalos de oferta nas diferentes etapas de ensino.
 
 * **`02_geoprocessamento_mapa_mg.ipynb` (Mapeamento Geográfico e Territorial):** 
-  Transforma os indicadores municipais em **mapas interativos interativos (HTML)**. Permite identificar espacialmente as regiões de "apagão tecnológico" em Minas Gerais, orientando o direcionamento regional de investimentos em banda larga e laboratórios de informática.
+  Transforma os indicadores municipais em **mapas interativos (HTML)**. Permite identificar espacialmente as regiões de "apagão tecnológico" em Minas Gerais, orientando o direcionamento regional de investimentos em banda larga e laboratórios de informática.
+  
+  > 🌐 **Acesse os Mapas Interativos em Tempo Real (GitHub Pages):**
+  > * 🗺️ [Mapa Interativo de Conectividade Escolar (MG)](https://julianomata.github.io/Projeto-Educacao-Analytics/Imagens/mapa_interativo_conectividade_mg.html)
+  > * 🖥️ [Mapa Interativo de Laboratórios de Informática (MG)](https://julianomata.github.io/Projeto-Educacao-Analytics/Imagens/mapa_interativo_laboratorios_mg.html)
 
 * **`03_modelo_preditivo_alerta_evasao.ipynb` (Machine Learning e Alerta Precoce):** 
   Aplica Inteligência Artificial (`RandomForestClassifier`) sobre as **11.950 escolas públicas ativas de MG** para calcular o **Score de Vulnerabilidade** ($0$ a $100$) e classificar as unidades em faixas de risco (🔴 **Crítico**, 🟡 **Médio**, 🟢 **Baixo**). Gera a **Matriz Nominativa de Intervenção Prioritária** para apoiar ações preventivas contra a evasão escolar.
