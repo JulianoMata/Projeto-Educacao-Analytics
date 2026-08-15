@@ -45,11 +45,11 @@ Os microdados utilizados são de domínio público, disponibilizados pelo **Inst
 ---
 
 ## 🏗️ Arquitetura do Repositório
-
-```text
+```
 📁 Projeto_Educacao_Analytics/
-├── 📁 Dados_Educacao/           # Diretório de dados (Dados brutos ignorados pelo Git)
-│   └── 📁 outputs/              # Datasets preditivos e agregados gerados pelos pipelines
+├── 📁 .venv/                    # Ambiente virtual Python (ignorado pelo Git via .gitignore)
+├── 📁 Dados_Educacao/           # Diretório de dados brutos do INEP (ignorado pelo Git)
+│   └── 📁 outputs/              # Datasets preditivos e analíticos gerados pelos pipelines
 │       ├── matriz_alerta_evasao_mg.csv
 │       ├── tb_mg_dados_georeferenciados.csv
 │       ├── tb_mg_infra_serie_historica.csv
@@ -66,12 +66,21 @@ Os microdados utilizados são de domínio público, disponibilizados pelo **Inst
 │   ├── 01_analise_exploratoria_educacao_mg.ipynb
 │   ├── 02_geoprocessamento_mapa_mg.ipynb
 │   └── 03_modelo_preditivo_alerta_evasao.ipynb
-├── 📁 Scripts_SQL/              # Modelagem DW, Staging e Views Analíticas (T-SQL)
+├── 📁 Scripts_SQL/              # Modelagem DW, Staging, Cargas e Views Analíticas (T-SQL)
 │   ├── 01_criacao_banco_de_dados.sql
-│   └── ...
-├── .gitignore                   # Regras de exclusão do Git
+│   ├── 02_diagnostico_volumetria_staging.sql
+│   ├── 03_auditoria_staging_dinamica.sql
+│   ├── 04_otimizacao_staging_dinamica.sql
+│   ├── 05_criacao_tabela_fato.sql
+│   ├── 06_carga_historica_2019_2024.sql
+│   ├── 07_view_consolidacao_2025.sql
+│   ├── 08_carga_incremental_2025.sql
+│   ├── 09_criacao_dimensoes.sql
+│   ├── 10_views_consumo_analytics.sql
+│   └── 11_relatorio_infraestrutura_matriculas_januaria.sql
+├── .gitignore                   # Regras de exclusão de binários, zips e ambiente virtual
 ├── LICENSE                      # Licença MIT
-├── README.md                    # Documentação do Projeto
+├── README.md                    # Documentação Arquitetural e Metodológica
 └── requirements.txt             # Dependências e Bibliotecas do Python
 ```
 ## 💻 Módulos do Pipeline Analítico
