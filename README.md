@@ -60,8 +60,8 @@ Os microdados utilizados são de domínio público, disponibilizados pelo **Inst
 ├── 📁 Imagens/                  # Gráficos em Alta Resolução e Mapas HTML Interativos
 │   ├── fig02_matriz_correlacao_mg.png
 │   ├── fig03_evolucao_temporal_conectividade_mg.png
-│   ├── fig03_feature_importance_evasao.png
 │   ├── fig04_perfil_oferta_etapas_mg.png
+│   ├── fig05_feature_importance_evasao.png
 │   ├── mapa_interativo_conectividade_mg.html
 │   └── mapa_interativo_laboratorios_mg.html
 ├── 📁 Notebooks/                # Pipelines Analíticos e Preditivos em Python (Jupyter)
