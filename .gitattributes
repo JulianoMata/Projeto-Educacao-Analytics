@@ -1,0 +1,25 @@
+# =============================================================================
+# ARQUIVO DE CONFIGURAÇÃO DE ATRIBUTOS DO REPOSITÓRIO (.gitattributes)
+# =============================================================================
+# Finalidade: Define regras de governança para o Git e GitHub, controlando a 
+# normalização de quebras de linha entre sistemas operacionais (Windows/Linux),
+# otimização de leitura de arquivos binários e saneamento das métricas de linguagem.
+
+# 1. NORMALIZAÇÃO DE QUEBRAS DE LINHA (CROSS-PLATFORM)
+# Garante conversão automática entre CRLF (Windows) e LF (Linux/macOS)
+* text=auto
+
+# 2. GOVERNANÇA DE LINGUAGENS NO GITHUB (LINGUIST)
+# Marca os mapas HTML compilados como artefatos gerados automaticamente,
+# impedindo que distorçam as estatísticas de linguagem do repositório (mantendo foco em Python e T-SQL)
+Imagens/*.html linguist-generated=true
+
+# 3. OTIMIZAÇÃO DE PERFORMANCE E TRATAMENTO DE BINÁRIOS
+# Define arquivos analíticos colunares e imagens como binários puros para evitar travamentos de diff
+*.parquet binary
+*.png binary
+
+# 4. VERSIONAMENTO DE TABELAS E NOTEBOOKS
+# Trata saídas tabulares e notebooks com leitura padronizada de texto
+*.csv text
+*.ipynb text eol=lf
