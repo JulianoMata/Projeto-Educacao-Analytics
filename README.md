@@ -49,26 +49,26 @@ Os microdados utilizados são de domínio público, disponibilizados pelo **Inst
 
 ```plaintext
 📁 Projeto_Educacao_Analytics/
-├── 📁 .venv/                    # Ambiente virtual Python (ignorado pelo Git via .gitignore)
-├── 📁 Dados_Educacao/           # Diretório de dados brutos do INEP (ignorado pelo Git)
-│   └── 📁 outputs/              # Datasets preditivos e analíticos gerados pelos pipelines
+├── 📁 .venv/                    # Ambiente virtual Python isolado (ignorado pelo Git)
+├── 📁 Dados_Educacao/           # Diretório de microdados brutos do INEP (ignorado pelo Git)
+│   └── 📁 outputs/              # Datasets analíticos e preditivos consolidados
 │       ├── matriz_alerta_evasao_mg.csv
 │       ├── tb_mg_dados_georeferenciados.csv
 │       ├── tb_mg_infra_serie_historica.csv
 │       ├── tb_mg_infra_serie_historica.parquet
 │       └── tb_top50_municipios_criticos.csv
-├── 📁 Imagens/                  # Gráficos em Alta Resolução e Mapas HTML Interativos
+├── 📁 Imagens/                  # Gráficos em alta resolução e mapas HTML interativos
 │   ├── fig02_matriz_correlacao_mg.png
 │   ├── fig03_evolucao_temporal_conectividade_mg.png
 │   ├── fig04_perfil_oferta_etapas_mg.png
 │   ├── fig05_feature_importance_evasao.png
 │   ├── mapa_interativo_conectividade_mg.html
 │   └── mapa_interativo_laboratorios_mg.html
-├── 📁 Notebooks/                # Pipelines Analíticos e Preditivos em Python (Jupyter)
+├── 📁 Notebooks/                # Pipelines analíticos e preditivos em Python (Jupyter)
 │   ├── 01_analise_exploratoria_educacao_mg.ipynb
 │   ├── 02_geoprocessamento_mapa_mg.ipynb
 │   └── 03_modelo_preditivo_alerta_evasao.ipynb
-├── 📁 Scripts_SQL/              # Modelagem DW, Staging, Cargas e Views Analíticas (T-SQL)
+├── 📁 Scripts_SQL/              # Modelagem dimensional, cargas e views (T-SQL)
 │   ├── 01_criacao_banco_de_dados.sql
 │   ├── 02_diagnostico_volumetria_staging.sql
 │   ├── 03_auditoria_staging_dinamica.sql
@@ -80,10 +80,11 @@ Os microdados utilizados são de domínio público, disponibilizados pelo **Inst
 │   ├── 09_criacao_dimensoes.sql
 │   ├── 10_views_consumo_analytics.sql
 │   └── 11_relatorio_infraestrutura_matriculas_januaria.sql
+├── .gitattributes               # Regras de governança de linguagens e normalização de quebras de linha
 ├── .gitignore                   # Regras de exclusão de binários, zips e ambiente virtual
-├── LICENSE                      # Licença MIT
-├── README.md                    # Documentação Arquitetural e Metodológica
-└── requirements.txt             # Dependências e Bibliotecas do Python
+├── LICENSE                      # Licença de uso de código aberto (MIT)
+├── README.md                    # Documentação técnica e guia de reprodução
+└── requirements.txt             # Dependências e bibliotecas do ecossistema Python
 ```
 
 ## 💻 Módulos do Pipeline Analítico
